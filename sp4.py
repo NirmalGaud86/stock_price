@@ -13,7 +13,7 @@ import numpy as np
 
 # Load the dataset
 df1 = pd.read_csv('jpmorgan_data.csv')
-df1['Date'] = pd.to_datetime(df1['Date'])
+df1['Date'] = pd.to_datetime(df1['Date'], format="%d-%m-%Y")
 df1.set_index('Date', inplace=True)
 
 # Scale the data
